@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ofertas Especiales - Premium Quality</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">  <!-- Reemplazar el icon -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Premium Quality</div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Inicio</a></li>
+                <li><a href="catalogo.html" class="nav-link">Catálogo</a></li>
+                <li><a href="ofertas.html" class="nav-link active">Ofertas</a></li>
+                <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="ofertas-especiales" class="ofertas-page">
+        <div class="ofertas-header">
+            <h1>Ofertas Exclusivas</h1>
+            <p class="ofertas-subtitle">Descubre nuestras promociones especiales</p>
+        </div>
+
+        <!-- Carrusel Minimalista -->
+        <div class="carousel-wrapper">
+            <div class="carousel-inner">
+                <!-- SLIDE 1 -->
+                <div class="carousel-item active">
+                    <img src="Fondos/Bono-Inicio.jpg" alt="Bono de Inicio Rápido">
+                    <div class="carousel-item-content">
+                        <span class="tag">HOT</span>
+                        <h3>Bono de Inicio Rápido</h3>
+                        <p>Recibe <strong>$1,500 USD</strong> de descuento adicional en la compra de cualquier vehículo
+                            <strong>SUV</strong>.</p>
+                        <span class="validity">Válido hasta: 31/01/2025</span>
+                        <a href="catalogo.html" class="btn">Ver SUVs</a>
+                    </div>
+                </div>
+
+                <!-- SLIDE 2 -->
+                <div class="carousel-item">
+                    <img src="Fondos/servicio-financiamiento.jpg" alt="Financiamiento a Tasa 0%">
+                    <div class="carousel-item-content">
+                        <span class="tag">NUEVO</span>
+                        <h3>Financiamiento a Tasa 0%</h3>
+                        <p>Planes de financiamiento con <strong>0% de interés</strong> durante los primeros 12 meses en
+                            modelos seleccionados.</p>
+                        <span class="validity">Requiere aprobación de crédito</span>
+                        <a href="contacto.html" class="btn">Consultar</a>
+                    </div>
+                </div>
+
+                <!-- SLIDE 3 -->
+                <div class="carousel-item">
+                    <img src="Fondos/Cargador-Domestico.jpg" alt="Eléctricos y Híbridos">
+                    <div class="carousel-item-content">
+                        <span class="tag">ECO</span>
+                        <h3>Eléctricos y Híbridos</h3>
+                        <p><strong>10% de descuento</strong> y la instalación de tu cargador doméstico gratuita en la
+                            compra de un eléctrico nuevo.</p>
+                        <span class="validity">¡Stock limitado!</span>
+                        <a href="catalogo.html" class="btn">Explorar</a>
+                    </div>
+                </div>
+
+                <!-- SLIDE 4 -->
+                <div class="carousel-item">
+                    <img src="Fondos/Garantia-Extendida.jpg" alt="Garantía Extendida Premium">
+                    <div class="carousel-item-content">
+                        <span class="tag">EXTRA</span>
+                        <h3>Garantía Extendida Premium</h3>
+                        <p>Extiende la garantía de fábrica por <strong>2 años más sin costo adicional</strong> en todos
+                            los sedanes de lujo.</p>
+                        <span class="validity">Solo este mes</span>
+                        <a href="catalogo.html" class="btn">Ver Sedanes</a>
+                    </div>
+                </div>
+
+                <!-- SLIDE 5 -->
+                <div class="carousel-item">
+                    <img src="Fondos/Financiamiento.jpg" alt="Financiamiento a Tasa Preferencial">
+                    <div class="carousel-item-content">
+                        <span class="tag">PREMIUM</span>
+                        <h3>Financiamiento a Tasa Preferencial</h3>
+                        <p>Obtén el <strong>50% de descuento en el enganche</strong> y planes de hasta 72 meses con tasa
+                            fija.</p>
+                        <span class="validity">Válido: 01/12/2025 - 30/12/2025</span>
+                        <a href="contacto.html" class="btn">Solicita Ahora</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controles -->
+            <button class="carousel-btn carousel-btn-prev" id="prevBtn" aria-label="Oferta anterior">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="carousel-btn carousel-btn-next" id="nextBtn" aria-label="Siguiente oferta">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+
+            <!-- Indicadores -->
+            <div class="carousel-indicators">
+                <button class="carousel-dot active" data-index="0" aria-label="Ir a oferta 1"></button>
+                <button class="carousel-dot" data-index="1" aria-label="Ir a oferta 2"></button>
+                <button class="carousel-dot" data-index="2" aria-label="Ir a oferta 3"></button>
+                <button class="carousel-dot" data-index="3" aria-label="Ir a oferta 4"></button>
+                <button class="carousel-dot" data-index="4" aria-label="Ir a oferta 5"></button>
+            </div>
+        </div>
+
+        <!-- Sección de Por Qué Elegirnos -->
+        <div class="why-choose-section">
+            <div class="why-choose-header">
+                <span class="why-choose-badge">VENTAJAS</span>
+                <h2>¿Por qué elegir Premium Quality?</h2>
+                <p class="why-choose-subtitle">Descubre lo que nos hace especiales y diferente a la competencia</p>
+            </div>
+
+            <div class="why-choose-grid">
+                <div class="why-card">
+                    <div class="why-card-number">01</div>
+                    <div class="why-icon-box">
+                        <div class="why-icon">✨</div>
+                    </div>
+                    <h3>Calidad Garantizada</h3>
+                    <p>Vehículos inspeccionados y certificados con los más altos estándares de calidad internacional</p>
+                    <div class="why-card-accent"></div>
+                </div>
+
+                <div class="why-card">
+                    <div class="why-card-number">02</div>
+                    <div class="why-icon-box">
+                        <div class="why-icon">💳</div>
+                    </div>
+                    <h3>Financiamiento Flexible</h3>
+                    <p>Opciones de pago adaptadas a tu presupuesto y necesidades específicas con tasas competitivas</p>
+                    <div class="why-card-accent"></div>
+                </div>
+
+                <div class="why-card">
+                    <div class="why-card-number">03</div>
+                    <div class="why-icon-box">
+                        <div class="why-icon">🛠️</div>
+                    </div>
+                    <h3>Servicio Post Venta</h3>
+                    <p>Mantenimiento y soporte continuo para tu tranquilidad después de la compra de tu vehículo</p>
+                    <div class="why-card-accent"></div>
+                </div>
+
+                <div class="why-card">
+                    <div class="why-card-number">04</div>
+                    <div class="why-icon-box">
+                        <div class="why-icon">🚗</div>
+                    </div>
+                    <h3>Amplio Catálogo</h3>
+                    <p>Múltiples marcas y modelos disponibles para todos los gustos y presupuestos del mercado</p>
+                    <div class="why-card-accent"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-col brand-info">
+                <h3 class="footer-logo">Premium Quality</h3>
+                <p>Liderando la industria automotriz con pasión y compromiso, ofreciendo calidad y servicio premium.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="X (Twitter)"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col footer-links">
+                <h3>Navegación</h3>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="catalogo.html">Catálogo Completo</a></li>
+                    <li><a href="ofertas.html">Promociones</a></li>
+                    <li><a href="contacto.html">Contáctanos</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col footer-contact">
+                <h3>Contáctanos</h3>
+                <p>📍 Calle Principal 123, Ciudad Premium Quality</p>
+                <p>📞 +1 (555) 123-4567</p>
+                <p>📧 premiumqualityedi@gmail.com</p>
+                <p class="horario-footer">Horario: Lun-Vie 9am - 6pm</p>
+            </div>
+
+            <div class="footer-col footer-newsletter">
+                <h3>Únete a Premium Quality</h3>
+                <p>Recibe ofertas exclusivas y noticias de lanzamientos en tu correo.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Tu email" required>
+                    <button type="submit" class="cta-button">Suscribirme</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Premium Quality. Todos los derechos reservados. | <a href="#">Política de Privacidad</a></p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <script src="carousel-ofertas.js"></script>
+</body>
+
+</html>

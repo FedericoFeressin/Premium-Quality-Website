@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Quality - Inicio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Premium Quality</div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link active">Inicio</a></li>
+                <li><a href="catalogo.html" class="nav-link">Catálogo</a></li>
+                <li><a href="ofertas.html" class="nav-link">Ofertas</a></li>
+                <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+                <li>
+                    <div class="carrito-icon" id="carritoIcon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="carrito-count">0</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <br>
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Encuentra tu Próximo Vehículo</h1>
+            <p class="hero-subtitle">Lujo, confiabilidad y calidad en cada modelo</p>
+            <a href="catalogo.html" class="cta-button" aria-label="Explorar catálogo de vehículos">Explorar Catálogo</a>
+        </div>
+    </section>
+
+    <section id="carrusel-destacado" class="carousel-section">
+        <h2>Modelos Destacados de la Semana</h2>
+
+        <div class="carousel-wrapper">
+            <div class="carousel-inner" id="carouselInner">
+                <!-- Los slides se cargarán aquí con JavaScript -->
+            </div>
+
+            <!-- Controles -->
+            <button class="carousel-btn carousel-btn-prev" id="carouselPrev">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="carousel-btn carousel-btn-next" id="carouselNext">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+
+            <!-- Indicadores -->
+            <div class="carousel-indicators" id="carouselIndicators"></div>
+        </div>
+    </section>
+
+
+
+    <section id="servicios" class="servicios-section">
+        <h2>Nuestros Servicios</h2>
+        <div class="servicios-container">
+
+            <div class="servicio-card">
+                <div class="servicio-img-wrapper">
+                    <img src="Fondos/servicio-financiamiento.jpg" alt="Servicio de Financiamiento" class="servicio-img"
+                        loading="lazy">
+                </div>
+                <div class="servicio-content">
+                    <h3>Financiamiento Flexible</h3>
+                    <p>Te ayudamos a conseguir el plan de pago que mejor se adapte a tu presupuesto.</p>
+                    <a href="contacto.html" class="servicio-link">Consultar Opciones</a>
+                </div>
+            </div>
+
+            <div class="servicio-card">
+                <div class="servicio-img-wrapper">
+                    <img src="Fondos/servicio-mantenimiento.jpg" alt="Servicio de Mantenimiento" class="servicio-img"
+                        loading="lazy">
+                </div>
+                <div class="servicio-content">
+                    <h3>Servicio y Mantenimiento</h3>
+                    <p>Mantenemos tu vehículo en óptimas condiciones con técnicos certificados.</p>
+                    <a href="contacto.html" class="servicio-link">Reservar Cita</a>
+                </div>
+            </div>
+
+            <div class="servicio-card">
+                <div class="servicio-img-wrapper">
+                    <img src="Fondos/servicio-prueba.jpg" alt="Prueba de Manejo" class="servicio-img" loading="lazy">
+                </div>
+                <div class="servicio-content">
+                    <h3>Prueba de Manejo</h3>
+                    <p>Experimenta la emoción de conducir tu próximo auto antes de tomar una decisión.</p>
+                    <a href="contacto.html" class="servicio-link">Agendar Prueba</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="Testimonios-Home">
+        <h2>Lo que Dicen Nuestros Clientes</h2>
+        <div class="testimonios-container">
+
+            <div class="testimonio-card">
+                <p class="testimonio-text">"La experiencia de compra fue increíble. El equipo de Premium Quality me
+                    ayudó a encontrar el auto perfecto y el proceso de financiamiento fue muy sencillo."</p>
+                <h4 class="testimonio-author">- María G.</h4>
+            </div>
+
+            <div class="testimonio-card">
+                <p class="testimonio-text">"Excelente servicio postventa. Mi vehículo siempre está en las mejores manos
+                    gracias a su taller
+                    certificado."</p>
+                <h4 class="testimonio-author">- Carlos R.</h4>
+            </div>
+            <div class="testimonio-card">
+                <p class="testimonio-text">"La prueba de manejo fue decisiva para elegir mi nuevo auto. Pude sentir la
+                    calidad y el rendimiento
+                    antes de comprarlo."</p>
+                <h4 class="testimonio-author">- Ana L.</h4>
+            </div>
+        </div>
+    </section>
+
+    <section id="socios-marcas" class="socios-container">
+        <h2>Marcas que Respaldan Nuestra Calidad</h2>
+        <div class="logos-grid">
+            <img src="Fondos/TESLA.png" alt="Logo Tesla" class="socio-logo">
+            <img src="Fondos/Logo-BMW.jpg" alt="Logo BMW" class="socio-logo">
+        </div>
+    </section>
+
+    <section id="faq" class="Preg-container">
+        <h2>Preguntas Comunes Antes de Comprar</h2>
+        <div class="acordeon-item">
+            <button class="acordeon-titulo">¿Ofrecen garantía en los vehículos?</button>
+            <div class="acordeon-contenido">
+                <p>Sí, todos nuestros vehículos premium incluyen una garantía extendida de 5 años...</p>
+            </div>
+        </div>
+        <div class="acordeon-item">
+            <button class="acordeon-titulo">¿Cómo funciona el proceso de financiación?</button>
+            <div class="acordeon-contenido">
+                <p>Nuestra financiación requiere un enganche del 20% y ofrece planes de hasta 60 meses...</p>
+            </div>
+        </div>
+        <div class="acordeon-item">
+            <button class="acordeon-titulo">¿Puedo agendar una prueba de manejo?</button>
+            <div class="acordeon-contenido">
+                <p>Por supuesto, puedes agendar una prueba de manejo a través de nuestro formulario de contacto...</p>
+            </div>
+        </div>
+    </section>
+
+    <div id="detalleModal" class="modal">
+        <div class="modal-content detalle-content">
+            <span class="modal-close" onclick="cerrarModales()">&times;</span>
+
+            <div class="modal-header-info">
+                <h2 id="modalHeaderTitle"></h2>
+                <p class="precio-final">$<span id="precioFinal"></span></p>
+            </div>
+
+            <div class="tab-buttons">
+                <button class="tab-button active" onclick="window.mostrarPestana('detalle')">Detalles del
+                    Vehículo</button>
+                <button class="tab-button" onclick="window.mostrarPestana('financiamiento')">Simular
+                    Financiamiento</button>
+            </div>
+
+            <div id="detalle" class="tab-content" style="display: block;">
+                <div class="detalle-wrapper">
+                    <div class="detalle-imagen">
+                        <img id="detalleImagen" src="" alt="Imagen del Vehículo">
+                    </div>
+                    <div class="detalle-info">
+                        <h3>Características Principales</h3>
+                        <div class="specs-grid" id="detalleSpecsTab">
+                        </div>
+
+                        <h3>Descripción Completa</h3>
+                        <p id="fullDescription" class="full-description"></p>
+
+                        <button class="cta-primary" onclick="agregarAlCarrito()">
+                            <i class="bi bi-cart-fill"></i> Añadir al Carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="financiamiento" class="tab-content" style="display: none;">
+                <div class="finan-body">
+                    <h3>Resumen de Financiamiento</h3>
+                    <div class="finan-summary">
+                        <div>
+                            <strong>Precio Base:</strong> $<span id="finanPrecioBase"></span>
+                        </div>
+                        <div>
+                            <strong>Enganche (20%):</strong> $<span id="finanEnganche"></span>
+                        </div>
+                        <div>
+                            <strong>Monto a Financiar:</strong> $<span id="finanMontoFinanciar"></span>
+                        </div>
+                        <div>
+                            <strong>Tasa Anual:</strong> <span id="finanTasa"></span>
+                        </div>
+                    </div>
+
+                    <h3>Planes de Cuotas Disponibles</h3>
+                    <table class="finan-table">
+                        <thead>
+                            <tr>
+                                <th>Plazo</th>
+                                <th>Cuota Mensual Aprox.</th>
+                                <th>Total a Pagar</th>
+                            </tr>
+                        </thead>
+                        <tbody id="finanCuotasBody">
+                        </tbody>
+                    </table>
+
+                    <p class="nota-financiamiento">
+                        *Tasa de interés y cuotas son estimadas. Sujeto a aprobación crediticia.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="carritoModal" class="modal">
+        <div class="modal-content carrito-modal-content">
+            <div class="carrito-header">
+                <h2>Mi Carrito</h2>
+                <button class="modal-close" onclick="cerrarModales()">&times;</button>
+            </div>
+            <div class="carrito-items-container" id="carritoItems">
+            </div>
+            <div class="carrito-footer">
+                <div class="carrito-total-line">
+                    <span>Total:</span>
+                    <span>$<span id="carritoTotal">0</span></span>
+                </div>
+                <button class="checkout-btn" onclick="alert('Redireccionar a checkout')">Proceder al Pago</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+
+            <div class="footer-col brand-info">
+                <h3 class="footer-logo">Premium Quality</h3>
+                <p>Liderando la industria automotriz con pasión y compromiso, ofreciendo calidad y servicio premium.</p>
+
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="X (Twitter)"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col footer-links">
+                <h3>Navegación</h3>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="catalogo.html">Catálogo Completo</a></li>
+                    <li><a href="ofertas.html">Promociones</a></li>
+                    <li><a href="contacto.html">Contáctanos</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col footer-contact">
+                <h3>Contáctanos</h3>
+                <p>📍 Calle Principal 123, Ciudad Premium Quality</p>
+                <p>📞 +1 (555) 123-4567</p>
+                <p>📧 premiumqualityedi@gmail.com</p>
+                <p class="horario-footer">Horario: Lun-Vie 9am - 6pm</p>
+            </div>
+
+            <div class="footer-col footer-newsletter">
+                <h3>Únete a Premium Quality</h3>
+                <p>Recibe ofertas exclusivas y noticias de lanzamientos en tu correo.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Tu email" required>
+                    <button type="submit" class="cta-button">Suscribirme</button>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Premium Quality. Todos los derechos reservados. | <a href="#">Política de Privacidad</a></p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo Completo - Premium Quality</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Premium Quality</div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Inicio</a></li>
+                <li><a href="catalogo.html" class="nav-link active">Catálogo</a></li>
+                <li><a href="ofertas.html" class="nav-link">Ofertas</a></li>
+                <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+                <li class="carrito-icon" id="carritoIcon">
+                    <i class="fas fa-shopping-cart"></i> <span class="carrito-count">0</span>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="catalogo-main" class="section-container">
+        <header class="catalogo-header">
+            <h1>Explora Nuestro Catálogo Premium</h1>
+            <p>Encuentra el vehículo perfecto entre nuestras colecciones exclusivas.</p>
+        </header>
+
+        <section id="filtros-seccion" class="filtros-bar">
+            <input type="text" id="searchInput" placeholder="Buscar por marca o modelo..." class="filtro-input">
+
+            <select id="tipoFiltro" class="filtro-select">
+                <option value="">Tipo de Vehículo</option>
+                <option value="sedan">Sedán</option>
+                <option value="suv">SUV</option>
+                <option value="coupe">Coupé</option>
+                <option value="hatchback">Hatchback</option>
+            </select>
+
+            <select id="precioFiltro" class="filtro-select">
+                <option value="">Rango de Precio</option>
+                <option value="0-60">Hasta $60,000</option>
+                <option value="60-100">$60,000 - $100,000</option>
+                <option value="100+">Más de $100,000</option>
+            </select>
+
+            <select id="ordenFiltro" class="filtro-select">
+                <option value="">Ordenar por...</option>
+                <option value="precio-asc">Precio: Menor a Mayor</option>
+                <option value="precio-desc">Precio: Mayor a Menor</option>
+                <option value="modelo-asc">Modelo: A - Z</option>
+                <option value="modelo-desc">Modelo: Z - A</option>
+            </select>
+
+
+
+        </section>
+
+        <section id="vehiculosGridContainer" class="vehiculos-grid-area">
+        </section>
+    </section>
+
+    <div id="carritoModal" class="modal">
+        <div class="modal-content carrito-modal-content">
+
+            <div class="carrito-header">
+                <h2>Tu Carrito</h2>
+                <button class="modal-close" onclick="cerrarModales()" aria-label="Cerrar">&times;</button>
+            </div>
+
+            <div class="carrito-items-container">
+                <div id="carritoItems">
+                </div>
+            </div>
+
+            <div class="carrito-footer">
+                <div class="carrito-total-line">
+                    <span>Total:</span>
+                    <span class="total-monto">$<span id="carritoTotal">0</span></span>
+                </div>
+                <button class="checkout-btn">PROCEDER AL PAGO</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="detalleModal" class="modal">
+        <div class="modal-content detalle-content">
+            <span class="modal-close" onclick="cerrarModales()">&times;</span>
+
+            <div class="modal-header-info">
+                <h2 id="modalHeaderTitle"></h2>
+                <p class="precio-final">$<span id="precioFinal"></span></p>
+            </div>
+
+            <div class="tab-buttons">
+                <button class="tab-button active" onclick="window.mostrarPestana('detalle')">Detalles del
+                    Vehículo</button>
+                <button class="tab-button" onclick="window.mostrarPestana('financiamiento')">Simular
+                    Financiamiento</button>
+            </div>
+
+            <div id="detalle" class="tab-content" style="display: block;">
+                <div class="detalle-wrapper">
+                    <div class="detalle-imagen">
+                        <img id="detalleImagen" src="" alt="Imagen del Vehículo">
+                    </div>
+                    <div class="detalle-info">
+                        <h3>Características Principales</h3>
+                        <div class="specs-grid" id="detalleSpecsTab">
+                        </div>
+
+                        <h3>Descripción Completa</h3>
+                        <p id="fullDescription" class="full-description"></p>
+
+                        <button class="cta-primary" onclick="agregarAlCarrito()">
+                            <i class="bi bi-cart-fill"></i> Añadir al Carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="financiamiento" class="tab-content" style="display: none;">
+                <div class="finan-body">
+                    <h3>Resumen de Financiamiento</h3>
+                    <div class="finan-summary">
+                        <div>
+                            <strong>Precio Base:</strong> $<span id="finanPrecioBase"></span>
+                        </div>
+                        <div>
+                            <strong>Enganche (20%):</strong> $<span id="finanEnganche"></span>
+                        </div>
+                        <div>
+                            <strong>Monto a Financiar:</strong> $<span id="finanMontoFinanciar"></span>
+                        </div>
+                        <div>
+                            <strong>Tasa Anual:</strong> <span id="finanTasa"></span>
+                        </div>
+                    </div>
+
+                    <h3>Planes de Cuotas Disponibles</h3>
+                    <table class="finan-table">
+                        <thead>
+                            <tr>
+                                <th>Plazo</th>
+                                <th>Cuota Mensual Aprox.</th>
+                                <th>Total a Pagar</th>
+                            </tr>
+                        </thead>
+                        <tbody id="finanCuotasBody">
+                        </tbody>
+                    </table>
+
+                    <p class="nota-financiamiento">
+                        *Tasa de interés y cuotas son estimadas. Sujeto a aprobación crediticia.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+
+            <div class="footer-col brand-info">
+                <h3 class="footer-logo">Premium Quality</h3>
+                <p>Liderando la industria automotriz con pasión y compromiso, ofreciendo calidad y servicio premium.</p>
+
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="X (Twitter)"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col footer-links">
+                <h3>Navegación</h3>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="catalogo.html">Catálogo Completo</a></li>
+                    <li><a href="ofertas.html">Promociones</a></li>
+                    <li><a href="contacto.html">Contáctanos</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col footer-contact">
+                <h3>Contáctanos</h3>
+                <p>📍 Calle Principal 123, Ciudad Premium Quality</p>
+                <p>📞 +1 (555) 123-4567</p>
+                <p>📧 premiumqualityedi@gmail.com</p>
+                <p class="horario-footer">Horario: Lun-Vie 9am - 6pm</p>
+            </div>
+
+            <div class="footer-col footer-newsletter">
+                <h3>Únete a Premium Quality</h3>
+                <p>Recibe ofertas exclusivas y noticias de lanzamientos en tu correo.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Tu email" required>
+                    <button type="submit" class="cta-button">Suscribirme</button>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Premium Quality. Todos los derechos reservados. | <a href="#">Política de Privacidad</a></p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <script>
+        // Funcionalidad de filtros mejorada
+        document.addEventListener('DOMContentLoaded', function () {
+            const searchInput = document.getElementById('searchInput');
+            const tipoFiltro = document.getElementById('tipoFiltro');
+            const precioFiltro = document.getElementById('precioFiltro');
+            const ordenFiltro = document.getElementById('ordenFiltro');
+
+            function aplicarFiltros() {
+                const vehiculos = document.querySelectorAll('.vehiculo-card');
+                const searchTerm = searchInput.value.toLowerCase();
+                const tipoSeleccionado = tipoFiltro.value;
+                const precioSeleccionado = precioFiltro.value;
+                const ordenSeleccionado = ordenFiltro.value;
+
+                let vehiculosVisibles = [];
+
+                vehiculos.forEach(vehiculo => {
+                    const titulo = vehiculo.querySelector('.card-title').textContent.toLowerCase();
+                    const specs = vehiculo.querySelector('.card-specs').textContent.toLowerCase();
+                    const precio = parseInt(vehiculo.querySelector('.card-price').textContent.replace(/[^\d]/g, ''));
+
+                    let mostrar = true;
+
+                    // Filtro de búsqueda
+                    if (searchTerm && !titulo.includes(searchTerm) && !specs.includes(searchTerm)) {
+                        mostrar = false;
+                    }
+
+                    // Filtro de tipo
+                    if (tipoSeleccionado && !specs.toLowerCase().includes(tipoSeleccionado.toLowerCase())) {
+                        mostrar = false;
+                    }
+
+                    // Filtro de precio
+                    if (precioSeleccionado) {
+                        const [min, max] = precioSeleccionado.split('-').map(p => parseInt(p) || Infinity);
+                        if (precio < min * 1000 || (max && precio > max * 1000)) {
+                            mostrar = false;
+                        }
+                    }
+
+                    if (mostrar) {
+                        vehiculosVisibles.push(vehiculo);
+                        vehiculo.style.display = 'block';
+                    } else {
+                        vehiculo.style.display = 'none';
+                    }
+                });
+
+                // Aplicar ordenamiento
+                if (ordenSeleccionado && vehiculosVisibles.length > 0) {
+                    const container = document.getElementById('vehiculosGridContainer');
+                    vehiculosVisibles.sort((a, b) => {
+                        const precioA = parseInt(a.querySelector('.card-price').textContent.replace(/[^\d]/g, ''));
+                        const precioB = parseInt(b.querySelector('.card-price').textContent.replace(/[^\d]/g, ''));
+                        const tituloA = a.querySelector('.card-title').textContent.toLowerCase();
+                        const tituloB = b.querySelector('.card-title').textContent.toLowerCase();
+
+                        switch (ordenSeleccionado) {
+                            case 'precio-asc': return precioA - precioB;
+                            case 'precio-desc': return precioB - precioA;
+                            case 'modelo-asc': return tituloA.localeCompare(tituloA);
+                            case 'modelo-desc': return tituloB.localeCompare(tituloB);
+                            default: return 0;
+                        }
+                    });
+
+                    // Reordenar elementos
+                    vehiculosVisibles.forEach(vehiculo => {
+                        container.appendChild(vehiculo);
+                    });
+                }
+
+                // Mostrar mensaje si no hay resultados
+                const mensajeNoResultados = document.getElementById('mensajeNoResultados') || crearMensajeNoResultados();
+                if (vehiculosVisibles.length === 0) {
+                    mensajeNoResultados.style.display = 'block';
+                } else {
+                    mensajeNoResultados.style.display = 'none';
+                }
+            }
+
+            function crearMensajeNoResultados() {
+                const mensaje = document.createElement('div');
+                mensaje.id = 'mensajeNoResultados';
+                mensaje.innerHTML = `
+                    <div style="text-align: center; padding: 3rem; color: #666;">
+                        <h3>No se encontraron vehículos</h3>
+                        <p>Intenta ajustar tus filtros de búsqueda</p>
+                    </div>
+                `;
+                document.getElementById('vehiculosGridContainer').appendChild(mensaje);
+                return mensaje;
+            }
+
+            // Event listeners
+            searchInput.addEventListener('input', aplicarFiltros);
+            tipoFiltro.addEventListener('change', aplicarFiltros);
+            precioFiltro.addEventListener('change', aplicarFiltros);
+            ordenFiltro.addEventListener('change', aplicarFiltros);
+
+            // Aplicar filtros iniciales
+            aplicarFiltros();
+        });
+    </script>
+</body>
+
+</html>

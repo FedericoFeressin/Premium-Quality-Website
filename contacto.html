@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Premium Quality</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Premium Quality</div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Inicio</a></li>
+                <li><a href="catalogo.html" class="nav-link">Catálogo</a></li>
+                <li><a href="ofertas.html" class="nav-link">Ofertas</a></li>
+                <li><a href="contacto.html" class="nav-link active">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="contacto" class="contacto-section">
+        <div class="contacto-wrapper">
+
+            <div class="info-section">
+                <h2>Información y Contacto</h2>
+                <p class="subtitle-contacto">Estamos aquí para ayudarte a encontrar el vehículo perfecto. Contáctanos
+                    por el medio que prefieras.</p>
+
+                <div class="info-cards">
+                    <div class="info-card">
+                        <span class="info-icon">📍</span>
+                        <div class="info-text">
+                            <strong>Nuestra Ubicación</strong>
+                            <p>Calle Principal 123, Ciudad Premium Quality</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <span class="info-icon">📞</span>
+                        <div class="info-text">
+                            <strong>Llámanos Ahora</strong>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <span class="info-icon">📧</span>
+                        <div class="info-text">
+                            <strong>Soporte en Línea</strong>
+                            <p>premiumqualityedi@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mapa-section">
+                    <h3>Horarios de Atención</h3>
+                    <p>Lunes a Viernes: 9:00 AM - 6:00 PM</p>
+                    <p style="margin-bottom: 1.5rem;">Sábados: 10:00 AM - 2:00 PM</p>
+
+                    <h3>Nuestra Ubicación</h3>
+                    <div class="mapa-placeholder">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d12303.11522567049!2d-58.40592325!3d-34.9129097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1ses-419!2sar!4v1764823985162!5m2!1ses-419!2sar"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="contacto-form-wrapper">
+                <h3>Envíanos un Mensaje</h3>
+                <form id="contactoForm" class="contacto-form">
+
+                    <input type="text" id="nombre" placeholder="Tu nombre completo" required>
+                    <input type="email" id="email" placeholder="Tu email" required>
+                    <input type="tel" id="telefono" placeholder="Tu teléfono (Opcional)">
+
+                    <select id="asunto" required>
+                        <option value="">Selecciona un asunto *</option>
+                        <option value="consulta">Consulta General</option>
+                        <option value="prueba">Solicitar Prueba de Manejo</option>
+                        <option value="financiamiento">Solicitar Financiamiento</option>
+                        <option value="otro">Otro / Servicio Técnico</option>
+                    </select>
+
+                    <textarea id="mensaje" placeholder="Tu mensaje o comentario..." rows="5" required></textarea>
+                    <button type="submit" class="submit-btn">Enviar Mensaje</button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+
+            <div class="footer-col brand-info">
+                <h3 class="footer-logo">Premium Quality</h3>
+                <p>Liderando la industria automotriz con pasión y compromiso, ofreciendo calidad y servicio premium.</p>
+
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="X (Twitter)"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col footer-links">
+                <h3>Navegación</h3>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="catalogo.html">Catálogo Completo</a></li>
+                    <li><a href="ofertas.html">Promociones</a></li>
+                    <li><a href="contacto.html">Contáctanos</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col footer-contact">
+                <h3>Contáctanos</h3>
+                <p>📍 Calle Principal 123, Ciudad Premium Quality</p>
+                <p>📞 +1 (555) 123-4567</p>
+                <p>📧 premiumqualityedi@gmail.com</p>
+                <p class="horario-footer">Horario: Lun-Vie 9am - 6pm</p>
+            </div>
+
+            <div class="footer-col footer-newsletter">
+                <h3>Únete a Premium Quality</h3>
+                <p>Recibe ofertas exclusivas y noticias de lanzamientos en tu correo.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Tu email" required>
+                    <button type="submit" class="cta-button">Suscribirme</button>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Premium Quality. Todos los derechos reservados. | <a href="#">Política de Privacidad</a></p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <script>
+        // Validación del formulario de contacto
+        document.getElementById('contactoForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const nombre = document.getElementById('nombre').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const telefono = document.getElementById('telefono').value.trim();
+            const asunto = document.getElementById('asunto').value;
+            const mensaje = document.getElementById('mensaje').value.trim();
+            
+            // Validaciones
+            if (nombre.length < 2) {
+                alert('Por favor ingresa un nombre válido (mínimo 2 caracteres)');
+                return;
+            }
+            
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Por favor ingresa un email válido');
+                return;
+            }
+            
+            if (telefono && telefono.length < 7) {
+                alert('Por favor ingresa un teléfono válido');
+                return;
+            }
+            
+            if (!asunto) {
+                alert('Por favor selecciona un asunto');
+                return;
+            }
+            
+            if (mensaje.length < 10) {
+                alert('Por favor ingresa un mensaje más detallado (mínimo 10 caracteres)');
+                return;
+            }
+            
+            // Si todo está bien, mostrar modal de confirmación
+            mostrarModalConfirmacion('Mensaje enviado exitosamente', 'Gracias por contactarnos. Te responderemos en breve.');
+            
+            // Limpiar formulario
+            this.reset();
+        });
+        
+        function mostrarModalConfirmacion(titulo, mensaje) {
+            // Crear modal dinámicamente
+            const modal = document.createElement('div');
+            modal.className = 'modal confirmacion-modal';
+            modal.innerHTML = `
+                <div class="modal-content confirmacion-content">
+                    <span class="modal-close" onclick="this.parentElement.parentElement.remove()">&times;</span>
+                    <div style="text-align: center; padding: 2rem;">
+                        <h2 style="color: #4CAF50; margin-bottom: 1rem;">${titulo}</h2>
+                        <p style="font-size: 1.1rem; color: #666; margin-bottom: 2rem;">${mensaje}</p>
+                        <button onclick="this.parentElement.parentElement.parentElement.remove()" 
+                                style="padding: 10px 20px; background: #667eea; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                            Aceptar
+                        </button>
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(modal);
+            modal.style.display = 'flex';
+        }
+    </script>
+</body>
+
+</html>
